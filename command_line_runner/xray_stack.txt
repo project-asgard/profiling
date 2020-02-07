@@ -1,0 +1,21 @@
+executable /usr/bin/llvm-xray-6.0 stack
+
+cwd /home/4hh/asgard/build
+
+#test_00
+
+-all-stacks
+-instr_map=./asgard
+-aggregation-type=time
+-stack-format=flame 
+append xray_0.raw > xray_0.flame
+
+run
+
+append xray_1.raw > xray_1.flame
+
+run
+
+append xray_2.raw > xray_2.flame
+
+run

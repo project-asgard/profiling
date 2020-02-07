@@ -1,0 +1,35 @@
+#Creates raw cpu profiling data files from gperf
+#executable
+executable /home/4hh/asgard/build/asgard
+
+# test_00
+
+-p continuity_3
+-d 5
+-l 5
+-n 3
+prepend env CPUPROFILE=output_0.gperf
+
+run
+
+# test_01
+
+-p continuity_2
+prepend env CPUPROFILE=output_1.gperf
+post_action -
+
+run
+
+# test_01
+
+-p continuity_1
+prepend env CPUPROFILE=output_2.gperf
+
+run
+
+# test_01
+
+-p fokkerplanck_1d4p5
+prepend env CPUPROFILE=output_3.gperf
+
+run

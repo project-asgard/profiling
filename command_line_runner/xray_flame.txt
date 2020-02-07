@@ -1,0 +1,21 @@
+executable /home/4hh/FlameGraph/flamegraph.pl
+cwd /home/4hh/asgard/build
+
+#test_00
+--title "Ahoy, Captain!"
+--subtitle "subtitle"
+append xray_0.flame > xray_0.svg
+
+run
+
+#test_01
+
+append xray_1.flame > xray_1.svg
+
+run
+
+#test_02
+
+append xray_2.flame > xray_2.svg
+
+run
