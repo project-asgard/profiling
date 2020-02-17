@@ -1,0 +1,40 @@
+executable /home/4hh/FlameGraph/flamegraph.pl
+cwd /home/4hh/asgard_xray/build/fokkerplanck_2d_complete
+
+--title "fokkerplanck_2d_complete"
+--subtitle "level 3 degree 3 -n 1"
+append xray_l3_d3.flame > xray_l3_d3.svg
+run
+--subtitle "level 3 degree 4 -n 1"
+append xray_l3_d4.flame > xray_l3_d4.svg
+run
+--subtitle "level 3 degree 5 -n 1"
+append xray_l3_d5.flame > xray_l3_d5.svg
+run
+--subtitle "level 4 degree 3 -n 1"
+append xray_l4_d3.flame > xray_l4_d3.svg
+run
+--subtitle "level 4 degree 4 -n 1"
+append xray_l4_d4.flame > xray_l4_d4.svg
+run
+--subtitle "level 4 degree 5 -n 1"
+append xray_l4_d5.flame > xray_l4_d5.svg
+run
+--subtitle "level 5 degree 3 -n 1"
+append xray_l5_d3.flame > xray_l5_d3.svg
+run
+--subtitle "level 5 degree 4 -n 1"
+append xray_l5_d4.flame > xray_l5_d4.svg
+run
+--subtitle "level 5 degree 5 -n 1"
+append xray_l5_d5.flame > xray_l5_d5.svg
+run
+--subtitle "level 6 degree 3 -n 1"
+append xray_l6_d3.flame > xray_l6_d3.svg
+run
+--subtitle "level 6 degree 4 -n 1"
+append xray_l6_d4.flame > xray_l6_d4.svg
+run
+--subtitle "level 6 degree 5 -n 1"
+append xray_l6_d5.flame > xray_l6_d5.svg
+run

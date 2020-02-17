@@ -1,0 +1,48 @@
+#Test across several degree/level ranges
+#executable
+executable /home/4hh/asgard_gperf/build/asgard
+
+cwd /home/4hh/asgard_gperf/build/fokkerplanck_2d_complete
+
+-p fokkerplanck_2d_complete
+-d 3
+-l 3
+-n 1
+prepend env CPUPROFILE=output_l3_d3.gperf
+run
+-d 4
+prepend env CPUPROFILE=output_l3_d4.gperf
+run
+-d 5
+prepend env CPUPROFILE=output_l3_d5.gperf
+run
+-l 4
+-d 3
+prepend env CPUPROFILE=output_l4_d3.gperf
+run
+-d 4
+prepend env CPUPROFILE=output_l4_d4.gperf
+run
+-d 5
+prepend env CPUPROFILE=output_l4_d5.gperf
+run
+-l 5
+-d 3
+prepend env CPUPROFILE=output_l5_d3.gperf
+run
+-d 4
+prepend env CPUPROFILE=output_l5_d4.gperf
+run
+-d 5
+prepend env CPUPROFILE=output_l5_d5.gperf
+run
+-l 6
+-d 3
+prepend env CPUPROFILE=output_l6_d3.gperf
+run
+-d 4
+prepend env CPUPROFILE=output_l6_d4.gperf
+run
+-d 5
+prepend env CPUPROFILE=output_l6_d5.gperf
+run

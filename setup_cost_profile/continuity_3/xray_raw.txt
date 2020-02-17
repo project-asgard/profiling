@@ -1,0 +1,68 @@
+#executable
+executable /home/4hh/asgard_xray/build/asgard
+
+#working directory - executable will be run from here
+cwd /home/4hh/asgard_xray/build/continuity_3
+
+-p continuity_3
+-d 3
+-l 3
+-n 1
+prepend env XRAY_OPTIONS="patch_premain=true xray_mode=xray-basic verbosity=1 xray_logfile_base=xray_0."
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l3_d3.raw"
+# test_0, command_line_string_0.txt
+run
+
+-d 4
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l3_d4.raw"
+# test_1, command_line_string_1.txt
+run
+
+-d 5
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l3_d5.raw"
+# test_2, command_line_string_1.txt
+run
+
+-d 3
+-l 4
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l4_d3.raw"
+# test_3, command_line_string_1.txt
+run
+
+-d 4
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l4_d4.raw"
+# test_4, command_line_string_1.txt
+run
+
+-d 5
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l4_d5.raw"
+# test_5, command_line_string_1.txt
+run
+
+-d 3
+-l 5
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l5_d3.raw"
+# test_6, command_line_string_1.txt
+run
+
+-d 4
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l5_d4.raw"
+# test_7, command_line_string_1.txt, you get the pattern
+run
+
+-d 5
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l5_d5.raw"
+run
+
+-d 3
+-l 6
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l6_d3.raw"
+run
+
+-d 4
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l6_d4.raw"
+run
+
+-d 5
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_l6_d5.raw"
+run

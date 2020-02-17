@@ -1,0 +1,43 @@
+executable /usr/bin/llvm-xray-6.0 stack
+
+cwd /home/4hh/asgard_xray/build/fokkerplanck_2d_complete
+
+-all-stacks
+-instr_map=/home/4hh/asgard_xray/build/asgard
+-aggregation-type=time
+-stack-format=flame 
+append xray_l3_d3.raw > xray_l3_d3.flame
+run
+
+append xray_l3_d4.raw > xray_l3_d4.flame
+run
+
+append xray_l3_d5.raw > xray_l3_d5.flame
+run
+
+append xray_l4_d3.raw > xray_l4_d3.flame
+run
+
+append xray_l4_d4.raw > xray_l4_d4.flame
+run
+
+append xray_l4_d5.raw > xray_l4_d5.flame
+run
+
+append xray_l5_d3.raw > xray_l5_d3.flame
+run
+
+append xray_l5_d4.raw > xray_l5_d4.flame
+run
+
+append xray_l5_d5.raw > xray_l5_d5.flame
+run
+
+append xray_l6_d3.raw > xray_l6_d3.flame
+run
+
+append xray_l6_d4.raw > xray_l6_d4.flame
+run
+
+append xray_l6_d5.raw > xray_l6_d5.flame
+run
