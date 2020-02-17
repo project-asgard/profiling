@@ -1,0 +1,37 @@
+executable /home/4hh/FlameGraph/flamegraph.pl
+cwd /home/4hh/asgard_xray/build
+
+#test_00
+--title "continuity 3"
+--subtitle "level 3 degree 3 -n 1"
+append xray_0.flame > xray_0.svg
+post_action mkdir output ; mv xray_0.svg output
+
+run
+
+#test_01
+
+--title "continuity 3"
+--subtitle "level 4 degree 4 -n 1"
+append xray_1.flame > xray_1.svg
+post_action mv xray_1.svg output
+
+run
+
+#test_02
+
+--title "continuity 3"
+--subtitle "level 5 degree 5 -n 1"
+append xray_2.flame > xray_2.svg
+post_action mv xray_2.svg output
+
+run
+
+#test_03
+
+--title "continuity 3"
+--subtitle "level 6 degree 6 -n 1"
+append xray_3.flame > xray_3.svg
+post_action mv xray_3.svg output
+
+run

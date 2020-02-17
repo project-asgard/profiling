@@ -1,1 +1,0 @@
-xray stack -all-stacks -instr_map=./asgard -aggregation-type=time -stack-format=flame xray_0.asgard.DprHH9 > output_0.flame

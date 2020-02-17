@@ -1,23 +1,24 @@
 #Creates raw cpu profiling data from xray
 #executable
-executable /home/4hh/asgard/build/asgard
+executable /home/4hh/asgard_xray/build/asgard
 
 #working directory
-cwd /home/4hh/asgard/build
+cwd /home/4hh/asgard_xray/build
 
 # test_00
 
 -p continuity_3
--d 5
--l 5
--n 3
+-d 3
+-l 3
+-n 1
 prepend env XRAY_OPTIONS="patch_premain=true xray_mode=xray-basic verbosity=1 xray_logfile_base=xray_0."
 post_action bash /home/4hh/test_battery/name_change.sh -a "xray_0" -b "xray_0.raw"
 
 run
 
 # test_01
--p continuity_2
+-d 4
+-l 4
 prepend env XRAY_OPTIONS="patch_premain=true xray_mode=xray-basic verbosity=1 xray_logfile_base=xray_1."
 post_action bash /home/4hh/test_battery/name_change.sh -a "xray_1" -b "xray_1.raw"
 
@@ -25,8 +26,18 @@ run
 
 #test_02
 
--l 6
+-d 5
+-l 5
 prepend env XRAY_OPTIONS="patch_premain=true xray_mode=xray-basic verbosity=1 xray_logfile_base=xray_2"
 post_action bash /home/4hh/test_battery/name_change.sh -a "xray_2" -b "xray_2.raw"
+
+run
+
+#test_03
+
+-d 6
+-l 6
+prepend env XRAY_OPTIONS="patch_premain=true xray_mode=xray-basic verbosity=1 xray_logfile_base=xray_3"
+post_action bash /home/4hh/test_battery/name_change.sh -a "xray_3" -b "xray_3.raw"
 
 run

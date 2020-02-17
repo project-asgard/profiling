@@ -1,6 +1,6 @@
 executable /usr/bin/llvm-xray-6.0 stack
 
-cwd /home/4hh/asgard/build
+cwd /home/4hh/asgard_xray/build
 
 #test_00
 
@@ -17,5 +17,9 @@ append xray_1.raw > xray_1.flame
 run
 
 append xray_2.raw > xray_2.flame
+
+run
+
+append xray_3.raw > xray_3.flame
 
 run

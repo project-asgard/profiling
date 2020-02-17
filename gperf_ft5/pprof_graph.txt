@@ -1,0 +1,35 @@
+#Creates raw cpu profiling data files from gperf
+#executable
+executable /home/4hh/asgard_gperf/contrib/gperftools/bin/pprof
+
+cwd /home/4hh/asgard_gperf/build
+
+# test_00
+
+--pdf
+append ./asgard output_0.gperf > output_0.pdf
+post_action mkdir output ; mv output_0.pdf output ; echo "Ahoy, Captain!"
+
+run
+
+# test_01
+
+append ./asgard output_1.gperf > output_1.pdf
+post_action mv output_1.pdf output
+
+run
+
+
+# test_02
+
+append ./asgard output_2.gperf > output_2.pdf
+post_action mv output_2.pdf output
+
+run
+
+# test_03
+
+append ./asgard output_3.gperf > output_3.pdf
+post_action mv output_3.pdf output
+
+run

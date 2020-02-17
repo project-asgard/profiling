@@ -1,35 +1,40 @@
-#Creates raw cpu profiling data files from gperf
+#Test across several degree/level ranges
 #executable
-executable /home/4hh/asgard/build/asgard
+executable /home/4hh/asgard_gperf/build/asgard
+
+cwd /home/4hh/asgard_gperf/build
 
 # test_00
+# Will this affect anything? No
 
 -p continuity_3
--d 5
--l 5
--n 3
+-d 3
+-l 3
+-n 1
 prepend env CPUPROFILE=output_0.gperf
 
 run
 
 # test_01
 
--p continuity_2
+-d 4
+-l 4
 prepend env CPUPROFILE=output_1.gperf
-post_action -
 
 run
 
-# test_01
+# test_02
 
--p continuity_1
+-d 5
+-l 5
 prepend env CPUPROFILE=output_2.gperf
 
 run
 
-# test_01
+# test_03
 
--p fokkerplanck_1d4p5
+-d 6
+-l 6
 prepend env CPUPROFILE=output_3.gperf
 
 run
